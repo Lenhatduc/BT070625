@@ -30,7 +30,7 @@
 # TÍCH HỢP HỆ THỐNG
 **Front-end**: TouchGFX
 - **Screen1**:
-    <image-card src="Screen1.png" ></image-card>
+    <image-card src="[Screen1.png](https://github.com/Lenhatduc/BT070625/blob/d135af720eb712d4c6cd0e5f1aeca80c5f3c668e/Screen1.png)" ></image-card>
     + Có các nút bấm để người dùng nhập số 
     + Chức năng hiển thị số đang nhập 
     + Nút **Unlock** để kiểm tra  
