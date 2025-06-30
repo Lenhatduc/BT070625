@@ -20,15 +20,15 @@
 | 3   | Đào Anh Quân | 20215631 | Task RTOS thực hiện logic chuyển màn hình. Thêm, xóa dữ liệu trong bộ nhớ Flash |
 
 # MÔI TRƯỜNG HOẠT ĐỘNG
-- Phần cứng: STM32F429 Discovery Kit
-- Phần mềm:
+- **Phần cứng**: STM32F429 Discovery Kit
+- **Phần mềm**:
     + TouchGFX (thiết kế giao diện đồ họa)
     + FreeRTOS (quản lý tác vụ thời gian thực)
     + STM32CubeIDE (môi trường phát triển)
-- Bộ nhớ: Flash (sector FLASH_SECTOR_23 để lưu trữ pattern)
+- **Bộ nhớ**: Flash (sector FLASH_SECTOR_23 để lưu trữ pattern)
 
 # TÍCH HỢP HỆ THỐNG
-## Front-end: TouchGFX
+**Front-end**: TouchGFX
 - Screen1:
     <image-card src="images/screen1.png" ></image-card>
     + Có các nút bấm để người dùng nhập số 
