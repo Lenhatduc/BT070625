@@ -32,15 +32,15 @@ Content
 ## Front-end: TouchGFX
 - Screen1:
 <image-card src="images/screen1.png" ></image-card>
-Có các nút bấm để người dùng nhập số 
-Chức năng hiển thị số đang nhập 
-Nút Unlock để kiểm tra  
-Nút Register (ẩn) dùng để đăng ký  
++ Có các nút bấm để người dùng nhập số 
++ Chức năng hiển thị số đang nhập 
++ Nút Unlock để kiểm tra  
++ Nút Register (ẩn) dùng để đăng ký  
 
 - Screen2:
 <image-card src="images/screen2.png" ></image-card>
-Hiển thị chữ OK thể hiện hành động (đăng nhập/đăng ký) thành công 
-Có Interaction sẽ tự động chuyển về Screen1 sau mỗi 100 Tick 
++ Hiển thị chữ OK thể hiện hành động (đăng nhập/đăng ký) thành công 
++ Có Interaction sẽ tự động chuyển về Screen1 sau mỗi 100 Tick 
 
 # ĐẶC TẢ HÀM
 ```c
