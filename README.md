@@ -1,5 +1,5 @@
 # GIỚI THIỆU
-**Đề bài**: Security Pattern
+**Đề bài**:    Security Pattern
 
 **Sản phẩm**: 
 1.    Giao diện người dùng: Thiết kế trực quan với 9 nút điểm để nhập pattern, sử dụng TouchGFX.
