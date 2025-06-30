@@ -10,8 +10,8 @@
 6.    Phản hồi người dùng: LED tại GPIOG_PIN_13 nhấp nháy khi chuyển sang chế độ đăng ký.
 
 # TÁC GIẢ
-- Nhóm thực hiện: The Three Musketeers
-- Thành viên trong nhóm 
+-    Nhóm thực hiện: The Three Musketeers
+-    Thành viên trong nhóm 
 
 | STT | Họ và tên | MSSV | Nhiệm vụ |
 |-----|-----------|------|----------|
