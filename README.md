@@ -2,12 +2,12 @@
 **Đề bài**: Security Pattern
 
 **Sản phẩm**: 
-    1.  Giao diện người dùng: Thiết kế trực quan với 9 nút điểm để nhập pattern, sử dụng TouchGFX.
-    2.  Chế độ đăng ký: Kích hoạt khi nhấn giữ nút Boot (GPIOA_PIN_0) trong 3 giây, cho phép đăng ký pattern mới.
-    3.  Chế độ mở khóa: Kiểm tra pattern nhập vào so với danh sách pattern đã lưu.
-    4.  Hiển thị kết quả: Màn hình thông báo "OK" khi đăng ký hoặc mở khóa thành công, tự động trở về trạng thái khóa sau 100 Tick.
-    5.  Quản lý bộ nhớ Flash: Lưu, đọc và xóa pattern trong sector FLASH_SECTOR_23.
-    6.  Phản hồi người dùng: LED tại GPIOG_PIN_13 nhấp nháy khi chuyển sang chế độ đăng ký.
+1.    Giao diện người dùng: Thiết kế trực quan với 9 nút điểm để nhập pattern, sử dụng TouchGFX.
+2.    Chế độ đăng ký: Kích hoạt khi nhấn giữ nút Boot (GPIOA_PIN_0) trong 3 giây, cho phép đăng ký pattern mới.
+3.    Chế độ mở khóa: Kiểm tra pattern nhập vào so với danh sách pattern đã lưu.
+4.    Hiển thị kết quả: Màn hình thông báo "OK" khi đăng ký hoặc mở khóa thành công, tự động trở về trạng thái khóa sau 100 Tick.
+5.    Quản lý bộ nhớ Flash: Lưu, đọc và xóa pattern trong sector FLASH_SECTOR_23.
+6.    Phản hồi người dùng: LED tại GPIOG_PIN_13 nhấp nháy khi chuyển sang chế độ đăng ký.
 
 # TÁC GIẢ
 - Nhóm thực hiện: The Three Musketeers
