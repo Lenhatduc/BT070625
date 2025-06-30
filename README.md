@@ -45,7 +45,9 @@ Content
 # ĐẶC TẢ HÀM
 ```c
     /** 
-    - Hàm task chạy trong môi trường RTOS, dùng để kiểm tra trạng thái nút nhấn tại chân GPIOA_PIN_0. Khi người dùng nhấn giữ nút trong 3 giây thì sẽ gửi ký tự ‘C’ vào hàng đợi, là tín hiệu để sang màn hình đăng ký. Ngoài ra mỗi lần phát hiện nhấn giữ đủ thời gian, LED tại GPIOG_PIN_13 sẽ nhấp nháy để phản hồi. 
+    - Hàm task chạy trong môi trường RTOS, dùng để kiểm tra trạng thái nút nhấn tại chân GPIOA_PIN_0.
+    Khi người dùng nhấn giữ nút trong 3 giây thì sẽ gửi ký tự ‘C’ vào hàng đợi, là tín hiệu để sang màn hình đăng ký.
+    Ngoài ra mỗi lần phát hiện nhấn giữ đủ thời gian, LED tại GPIOG_PIN_13 sẽ nhấp nháy để phản hồi. 
     */ 
 
     void StartBootCheckTask(void *argument);
@@ -53,7 +55,8 @@ Content
 
 ```c
     /** 
-    - Khi người dùng nhấn vào các nút số trên màn hình, hàm này sẽ được gọi tương ứng. Hàm sẽ tính lại giá trị Password đang nhập bằng công thức: giá trị mới = giá trị cũ * 10 + i ; 
+    - Khi người dùng nhấn vào các nút số trên màn hình, hàm này sẽ được gọi tương ứng.
+    Hàm sẽ tính lại giá trị Password đang nhập bằng công thức: giá trị mới = giá trị cũ * 10 + i ; 
     */ 
 
     void Screen1View::function*() (* ở đây là từ 1 đến 9); 
@@ -61,7 +64,10 @@ Content
 
 ```c
     /** 
-    - Hàm sẽ được gọi khi người dùng nhấn vào nút Register trên màn hình, Hàm sẽ lấy danh sách các Password đã được lưu trong Flash bằng hàm : Flash_Read_All_Uint32. Sau đó kiểm tra giá trị giá trị Password đang nhập có nằm trong các giá trị đã lưu không. Nếu không có, sẽ gọi hàm Flash_Append_Uint32 để lưu giá trị Password đăng ký và chuyển sang Screen2 
+    - Hàm sẽ được gọi khi người dùng nhấn vào nút Register trên màn hình,
+    hàm sẽ lấy danh sách các Password đã được lưu trong Flash bằng hàm : Flash_Read_All_Uint32.
+    Sau đó kiểm tra giá trị giá trị Password đang nhập có nằm trong các giá trị đã lưu không.
+    Nếu không có, sẽ gọi hàm Flash_Append_Uint32 để lưu giá trị Password đăng ký và chuyển sang Screen2 
     */ 
 
     void Screen1View::functionRegister(); 
@@ -69,7 +75,10 @@ Content
 
 ```c
     /** 
-    - Hàm sẽ được gọi khi người dùng nhấn vào nút Unlock trên màn hình. Hàm sẽ lấy danh sách các Password đã được lưu trong Flash. Sau đó, kiểm tra giá trị Password có nằm trong danh sách đã lưu không. Nếu có thì mở khóa (chuyển sang Screen2)
+    - Hàm sẽ được gọi khi người dùng nhấn vào nút Unlock trên màn hình.
+    Hàm sẽ lấy danh sách các Password đã được lưu trong Flash.
+    Sau đó, kiểm tra giá trị Password có nằm trong danh sách đã lưu không.
+    Nếu có thì mở khóa (chuyển sang Screen2)
     */ 
 
     void Screen1View::functionUnlock();
@@ -79,9 +88,9 @@ Content
     /** 
     - Hàm sẽ liên tục lặp lại trong vòng 1Tick: Với mỗi lần, hàm sẽ thực hiện các công việc: 
         + Lấy giá trị của Password đang nhập và hiển thị lên màn hình. 
-        +Kiểm tra xem có giá trị trong hàng đợi không, nếu có thì chuyển màn hình sang chế độ Register 
-        +Kiểm tra chế độ của màn hình Unlock hay Register bằng biến toàn cụ isUnlock. 
-        Nếu isUnlock = 0 thì ẩn nút Unlock, hiện nút Register (Chế độ Register) và ngược lại. 
+        + Kiểm tra xem có giá trị trong hàng đợi không, nếu có thì chuyển màn hình sang chế độ Register 
+        + Kiểm tra chế độ của màn hình Unlock hay Register bằng biến toàn cụ isUnlock. 
+            + Nếu isUnlock = 0 thì ẩn nút Unlock, hiện nút Register (Chế độ Register) và ngược lại. 
     */ 
 
     void Screen1View::function1Tick();
@@ -89,7 +98,8 @@ Content
 
 ```c
     /** 
-    - Thực hiện xóa toàn bộ vùng nhớ Flash tại sector lưu log dữ liệu (FLASH_SECTOR_23), bằng cách đặt toàn bộ giá trị về 0xFFFFFFFF 
+    - Thực hiện xóa toàn bộ vùng nhớ Flash tại sector lưu log dữ liệu (FLASH_SECTOR_23),
+    bằng cách đặt toàn bộ giá trị về 0xFFFFFFFF 
     */ 
 
     void Flash_Clear_Log(); 
@@ -97,7 +107,9 @@ Content
 
 ```c
     /** 
-    - Hàm thực hiện đọc liên tiếp các giá trị từ bộ nhớ Flash, bắt đầu từ địa chỉ FLASH_USER_START_ADDR. Hàm dừng đọc khi gặp giá trị 0xFFFFFFFF hoặc đã đạt đến max_length phần tử. 
+    - Hàm thực hiện đọc liên tiếp các giá trị từ bộ nhớ Flash,
+    bắt đầu từ địa chỉ FLASH_USER_START_ADDR. Hàm dừng đọc khi
+    gặp giá trị 0xFFFFFFFF hoặc đã đạt đến max_length phần tử. 
     - Tham số: 
     @param buffer: Con trỏ trỏ đến mảng đệm để lưu dữ liệu đọc từ Flash 
     @param max_length: Số lượng tối đa phần tử có thể lưu vào buffer 
@@ -109,7 +121,8 @@ Content
 
 ```c
     /** 
-    - Hàm ghi một giá trị uint32_t vào bộ nhớ Flash, bắt đầu từ địa chỉ FLASH_USER_START_ADDR. Dữ liệu được ghi tại vị trí trống đầu tiên (vị trí có giá trị bằng 0xFFFFFFFF. 
+    - Hàm ghi một giá trị uint32_t vào bộ nhớ Flash, bắt đầu từ địa chỉ FLASH_USER_START_ADDR.
+    Dữ liệu được ghi tại vị trí trống đầu tiên (vị trí có giá trị bằng 0xFFFFFFFF. 
     - Tham số: 
     @param data: Giá trị kiểu uint32_t cần ghi vào bộ nhớ Flash 
     */ 
