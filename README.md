@@ -1,8 +1,7 @@
-Content
 # GIỚI THIỆU
-## Đề bài: Security Pattern
+**Đề bài**: Security Pattern
 
-## Sản phẩm: 
+**Sản phẩm**: 
     1.  Giao diện người dùng: Thiết kế trực quan với 9 nút điểm để nhập pattern, sử dụng TouchGFX.
     2.  Chế độ đăng ký: Kích hoạt khi nhấn giữ nút Boot (GPIOA_PIN_0) trong 3 giây, cho phép đăng ký pattern mới.
     3.  Chế độ mở khóa: Kiểm tra pattern nhập vào so với danh sách pattern đã lưu.
