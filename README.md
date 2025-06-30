@@ -98,7 +98,7 @@
         + Lấy giá trị của Password đang nhập và hiển thị lên màn hình. 
         + Kiểm tra xem có giá trị trong hàng đợi không, nếu có thì chuyển màn hình sang chế độ Register 
         + Kiểm tra chế độ của màn hình Unlock hay Register bằng biến toàn cụ isUnlock. 
-            + Nếu isUnlock = 0 thì ẩn nút Unlock, hiện nút Register (Chế độ Register) và ngược lại. 
+            Nếu isUnlock = 0 thì ẩn nút Unlock, hiện nút Register (Chế độ Register) và ngược lại. 
     */ 
 
     void Screen1View::function1Tick();
