@@ -29,17 +29,26 @@
 
 # TÍCH HỢP HỆ THỐNG
 **Front-end**: TouchGFX
-- Screen1:
+- **Screen1**:
     <image-card src="images/screen1.png" ></image-card>
     + Có các nút bấm để người dùng nhập số 
     + Chức năng hiển thị số đang nhập 
-    + Nút Unlock để kiểm tra  
-    + Nút Register (ẩn) dùng để đăng ký  
+    + Nút **Unlock** để kiểm tra  
+    + Nút **Register** (ẩn trong chế độ mở khóa) dùng để đăng ký  
 
-- Screen2:
+- **Screen2**:
     <image-card src="images/screen2.png" ></image-card>
     + Hiển thị chữ OK thể hiện hành động (đăng nhập/đăng ký) thành công 
-    + Có Interaction sẽ tự động chuyển về Screen1 sau mỗi 100 Tick 
+    + Có Interaction sẽ tự động chuyển về Screen1 sau mỗi 100 Tick
+
+ **Back-end**: RTOS và Flash
+- **Tác vụ RTOS**:
+    + Kiểm tra trạng thái nút Boot (GPIOA_PIN_0) 
+    + Gửi tín hiệu ‘C’ vào hàng đợi khi nhấn giữ 3 giây để chuyển sang chế độ đăng ký 
+
+- **Quản lý Flash**:
+    + Lưu pattern tại địa chỉ *FLASH_USER_START_ADDR*
+    + Xóa sector FLASH_SECTOR_23 khi cần thiết 
 
 # ĐẶC TẢ HÀM
 ```c
