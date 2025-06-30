@@ -37,7 +37,7 @@
     + Nút **Register** (ẩn trong chế độ mở khóa) dùng để đăng ký  
 
 - **Screen2**:
-    
+    ![Screen2](https://github.com/Lenhatduc/BT070625/blob/main/Screen2.png)
     + Hiển thị chữ OK thể hiện hành động (đăng nhập/đăng ký) thành công 
     + Có Interaction sẽ tự động chuyển về Screen1 sau mỗi 100 Tick
 
